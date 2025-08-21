@@ -1,0 +1,88 @@
+# Leonardo Tool Call Grammar (EBNF)
+# Ensures LLM outputs ONLY valid JSON tool calls, no "chatty text"
+
+# Root rule: Must be a valid tool call object
+root ::= tool_call
+
+# Tool call structure - MUST match ToolCall schema exactly
+tool_call ::= "{" ws
+    "\"tool\":" ws tool_name "," ws
+    "\"args\":" ws tool_args "," ws
+    "\"meta\":" ws meta_data ws
+"}"
+
+# Tool name - must be from AVAILABLE_TOOLS registry
+tool_name ::= 
+    "\"get_weather\"" |
+    "\"web.scrape\"" |
+    "\"web.search\"" |
+    "\"web.extract\"" |
+    "\"web.crawl\"" |
+    "\"web.deep_research\"" |
+    "\"research.query\"" |
+    "\"research.add_knowledge\"" |
+    "\"research.configure\"" |
+    "\"search_web\"" |
+    "\"search_web_api\"" |
+    "\"navigate_to\"" |
+    "\"interact_with_page\"" |
+    "\"extract_content\"" |
+    "\"read_file\"" |
+    "\"write_file\"" |
+    "\"list_files\"" |
+    "\"get_time\"" |
+    "\"get_date\"" |
+    "\"system_info\"" |
+    "\"macos_control\"" |
+    "\"calculate\"" |
+    "\"respond\"" |
+    "\"send_email\"" |
+    "\"recall_memory\"" |
+    "\"teach_command\""
+
+# Tool arguments - JSON object with tool-specific structure
+tool_args ::= "{" ws (arg_pair (ws "," ws arg_pair)*)? ws "}"
+
+arg_pair ::= string_literal ":" ws json_value
+
+# Metadata object - must contain risk level
+meta_data ::= "{" ws
+    "\"risk\":" ws risk_level ("," ws meta_pair)*
+ws "}"
+
+meta_pair ::= string_literal ":" ws json_value
+
+# Risk levels - must match RiskLevel enum
+risk_level ::= 
+    "\"safe\"" |
+    "\"review\"" |
+    "\"confirm\"" |
+    "\"owner_root\""
+
+# JSON value types
+json_value ::= 
+    string_literal |
+    number |
+    boolean |
+    null |
+    json_object |
+    json_array
+
+json_object ::= "{" ws (json_pair (ws "," ws json_pair)*)? ws "}"
+json_pair ::= string_literal ":" ws json_value
+
+json_array ::= "[" ws (json_value (ws "," ws json_value)*)? ws "]"
+
+# Primitive types
+string_literal ::= "\"" string_content "\""
+string_content ::= (escape_sequence | [^"\\])*
+escape_sequence ::= "\\" (["\\/bfnrt] | "u" hex_digit hex_digit hex_digit hex_digit)
+
+number ::= "-"? ("0" | [1-9] [0-9]*) ("." [0-9]+)? ([eE] [+-]? [0-9]+)?
+boolean ::= "true" | "false"
+null ::= "null"
+
+hex_digit ::= [0-9a-fA-F]
+
+# Whitespace
+ws ::= [ \t\n\r]*

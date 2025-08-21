@@ -1,0 +1,88 @@
+{
+  "recent_turns": [
+    {
+      "id": "conversation_test_user_1755674714",
+      "user_id": "conversation_test_user",
+      "content": "User: Hi, I'm Bob and I'm working on a Python project\nAssistant: Hello Bob! I'd be happy to help with your Python project. What are you working on?",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "conversation"
+        ],
+        "response_type": "conversation",
+        "verification_status": "unknown",
+        "leonardo_session": "",
+        "user_id": "conversation_test_user",
+        "timestamp": "2025-08-20T08:25:14.081647",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:25:14.081664",
+      "user_input": "Hi, I'm Bob and I'm working on a Python project",
+      "ai_response": "Hello Bob! I'd be happy to help with your Python project. What are you working on?"
+    },
+    {
+      "id": "conversation_test_user_1755674714",
+      "user_id": "conversation_test_user",
+      "content": "User's name is Bob",
+      "metadata": {
+        "type": "user_fact",
+        "category": "identity",
+        "user_id": "conversation_test_user",
+        "timestamp": "2025-08-20T08:25:14.081957",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:25:14.081969",
+      "user_input": "User's name is Bob",
+      "ai_response": ""
+    },
+    {
+      "id": "conversation_test_user_1755674714",
+      "user_id": "conversation_test_user",
+      "content": "User: I need help with async programming\nAssistant: Async programming in Python is great! Let me explain async/await patterns...",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "conversation"
+        ],
+        "response_type": "conversation",
+        "verification_status": "unknown",
+        "leonardo_session": "",
+        "user_id": "conversation_test_user",
+        "timestamp": "2025-08-20T08:25:14.082001",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:25:14.082010",
+      "user_input": "I need help with async programming",
+      "ai_response": "Async programming in Python is great! Let me explain async/await patterns..."
+    },
+    {
+      "id": "conversation_test_user_1755674714",
+      "user_id": "conversation_test_user",
+      "content": "User: Can you remember what I told you about my project?\nAssistant: Yes, you mentioned you're Bob and you're working on a Python project. How can I help?",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "conversation"
+        ],
+        "response_type": "conversation",
+        "verification_status": "unknown",
+        "leonardo_session": "",
+        "user_id": "conversation_test_user",
+        "timestamp": "2025-08-20T08:25:14.082223",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:25:14.082234",
+      "user_input": "Can you remember what I told you about my project?",
+      "ai_response": "Yes, you mentioned you're Bob and you're working on a Python project. How can I help?"
+    }
+  ],
+  "user_profiles": {
+    "conversation_test_user": {
+      "name": "Bob"
+    }
+  },
+  "max_recent": 20
+}

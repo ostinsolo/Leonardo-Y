@@ -1,0 +1,297 @@
+{
+  "recent_memory": [
+    {
+      "id": "advanced_test_user_1755641209",
+      "user_id": "advanced_test_user",
+      "content": "User: What did I ask you before?\nAssistant: You asked me: 'What time is it?'",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": false,
+        "tools_used": [],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:06:49.925402"
+      },
+      "timestamp": "2025-08-19T23:06:49.925422"
+    },
+    {
+      "id": "advanced_test_user_1755641210",
+      "user_id": "advanced_test_user",
+      "content": "User: What was the first thing I asked?\nAssistant: What was the first thing I asked?",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": false,
+        "tools_used": [],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:06:50.226146"
+      },
+      "timestamp": "2025-08-19T23:06:50.226166"
+    },
+    {
+      "id": "advanced_test_user_1755641210",
+      "user_id": "advanced_test_user",
+      "content": "User: Can you summarize our conversation?\nAssistant: Can you summarize our conversation?",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": false,
+        "tools_used": [],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:06:50.526662"
+      },
+      "timestamp": "2025-08-19T23:06:50.526687"
+    },
+    {
+      "id": "advanced_test_user_1755641210",
+      "user_id": "advanced_test_user",
+      "content": "User: What did I ask about programming?\nAssistant: You asked me: 'What time is it?'",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": false,
+        "tools_used": [],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:06:50.827268"
+      },
+      "timestamp": "2025-08-19T23:06:50.827286"
+    },
+    {
+      "id": "advanced_test_user_1755641211",
+      "user_id": "advanced_test_user",
+      "content": "User: Do you remember what I asked about the weather?\nAssistant: I'd love to check the weather for you! Weather lookup is coming soon.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": false,
+        "tools_used": [],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:06:51.128621"
+      },
+      "timestamp": "2025-08-19T23:06:51.128643"
+    },
+    {
+      "id": "jarvis_test_user_1755641925",
+      "user_id": "jarvis_test_user",
+      "content": "User: What time is it?\nAssistant: The current time is 3:00 PM.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:45.528416"
+      },
+      "timestamp": "2025-08-19T23:18:45.528439"
+    },
+    {
+      "id": "jarvis_test_user_1755641925",
+      "user_id": "jarvis_test_user",
+      "content": "User: What day is today?\nAssistant: Today is Tuesday, August 19th.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:45.897550"
+      },
+      "timestamp": "2025-08-19T23:18:45.897572"
+    },
+    {
+      "id": "jarvis_test_user_1755641926",
+      "user_id": "jarvis_test_user",
+      "content": "User: When is my appointment?\nAssistant: I'd need to check your calendar for that.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:46.165829"
+      },
+      "timestamp": "2025-08-19T23:18:46.165869"
+    },
+    {
+      "id": "jarvis_test_user_1755641926",
+      "user_id": "jarvis_test_user",
+      "content": "User: What's the weather like?\nAssistant: It's sunny and 75 degrees.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:46.442642"
+      },
+      "timestamp": "2025-08-19T23:18:46.442662"
+    },
+    {
+      "id": "jarvis_test_user_1755641926",
+      "user_id": "jarvis_test_user",
+      "content": "User: Is it going to rain today?\nAssistant: No rain expected today.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:46.531441"
+      },
+      "timestamp": "2025-08-19T23:18:46.531472"
+    },
+    {
+      "id": "jarvis_test_user_1755641926",
+      "user_id": "jarvis_test_user",
+      "content": "User: Should I bring an umbrella?\nAssistant: No need for an umbrella today.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:46.851333"
+      },
+      "timestamp": "2025-08-19T23:18:46.851361"
+    },
+    {
+      "id": "jarvis_test_user_1755641927",
+      "user_id": "jarvis_test_user",
+      "content": "User: How do I debug Python code?\nAssistant: Use print statements or a debugger like pdb.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:47.164664"
+      },
+      "timestamp": "2025-08-19T23:18:47.164684"
+    },
+    {
+      "id": "jarvis_test_user_1755641927",
+      "user_id": "jarvis_test_user",
+      "content": "User: What's a good IDE for Python?\nAssistant: VS Code, PyCharm, or Vim are popular choices.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:47.468818"
+      },
+      "timestamp": "2025-08-19T23:18:47.468838"
+    },
+    {
+      "id": "jarvis_test_user_1755641927",
+      "user_id": "jarvis_test_user",
+      "content": "User: How do I install packages?\nAssistant: Use pip install or conda install commands.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:47.569552"
+      },
+      "timestamp": "2025-08-19T23:18:47.569572"
+    },
+    {
+      "id": "jarvis_test_user_1755641927",
+      "user_id": "jarvis_test_user",
+      "content": "User: Do you remember what I asked?\nAssistant: You asked about the weather earlier.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:47.676852"
+      },
+      "timestamp": "2025-08-19T23:18:47.676874"
+    },
+    {
+      "id": "jarvis_test_user_1755641927",
+      "user_id": "jarvis_test_user",
+      "content": "User: What did we discuss before?\nAssistant: We talked about time, weather, and programming.",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "respond"
+        ],
+        "response_type": "conversation",
+        "timestamp": "2025-08-19T23:18:47.788422"
+      },
+      "timestamp": "2025-08-19T23:18:47.788442"
+    },
+    {
+      "id": "web_test_user_1755643514",
+      "user_id": "web_test_user",
+      "content": "User: search for latest Python news\nAssistant: {'query': 'latest Python news', 'engine': 'duckduckgo', 'results': [{'title': 'Python Tutorial - Information about latest Python news', 'snippet': 'Learn more about Python Tutorial related to latest Python news. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/latest-Python-news/1', 'source': 'Mock Search Engine'}, {'title': 'Programming Guide - Information about latest Python news', 'snippet': 'Learn more about Programming Guide related to latest Python news. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/latest-Python-news/2', 'source': 'Mock Search Engine'}, {'title': 'Code Examples - Information about latest Python news', 'snippet': 'Learn more about Code Examples related to latest Python news. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/latest-Python-news/3', 'source': 'Mock Search Engine'}, {'title': 'Python Documentation - Information about latest Python news', 'snippet': 'Learn more about Python Documentation related to latest Python news. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/latest-Python-news/4', 'source': 'Mock Search Engine'}, {'title': 'Development Tips - Information about latest Python news', 'snippet': 'Learn more about Development Tips related to latest Python news. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/latest-Python-news/5', 'source': 'Mock Search Engine'}], 'count': 5, 'summary': \"I found 5 results for 'latest Python news': 1. Python Tutorial - Information about latest Python news 2. Programming Guide - Information about latest Python news 3. Code Examples - Information about latest Python news ... and 2 more results.\"}",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "search_web"
+        ],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:45:14.877842"
+      },
+      "timestamp": "2025-08-19T23:45:14.877875"
+    },
+    {
+      "id": "web_test_user_1755643515",
+      "user_id": "web_test_user",
+      "content": "User: find information about machine learning\nAssistant: {'query': 'information about machine learning', 'engine': 'duckduckgo', 'results': [{'title': 'information about machine learning Overview - Information about information about machine learning', 'snippet': 'Learn more about information about machine learning Overview related to information about machine learning. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/information-about-machine-learning/1', 'source': 'Mock Search Engine'}, {'title': 'information about machine learning Guide - Information about information about machine learning', 'snippet': 'Learn more about information about machine learning Guide related to information about machine learning. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/information-about-machine-learning/2', 'source': 'Mock Search Engine'}, {'title': 'information about machine learning Information - Information about information about machine learning', 'snippet': 'Learn more about information about machine learning Information related to information about machine learning. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/information-about-machine-learning/3', 'source': 'Mock Search Engine'}, {'title': 'information about machine learning Tutorial - Information about information about machine learning', 'snippet': 'Learn more about information about machine learning Tutorial related to information about machine learning. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/information-about-machine-learning/4', 'source': 'Mock Search Engine'}, {'title': 'information about machine learning Resources - Information about information about machine learning', 'snippet': 'Learn more about information about machine learning Resources related to information about machine learning. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/information-about-machine-learning/5', 'source': 'Mock Search Engine'}], 'count': 5, 'summary': \"I found 5 results for 'information about machine learning': 1. information about machine learning Overview - Information about information abou... 2. information about machine learning Guide - Information about information about m... 3. information about machine learning Information - Information about information a... ... and 2 more results.\"}",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "search_web"
+        ],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:45:15.581863"
+      },
+      "timestamp": "2025-08-19T23:45:15.581896"
+    },
+    {
+      "id": "web_test_user_1755643516",
+      "user_id": "web_test_user",
+      "content": "User: search for Leonardo da Vinci biography\nAssistant: {'query': 'Leonardo da Vinci biography', 'engine': 'duckduckgo', 'results': [{'title': 'Leonardo da Vinci biography Overview - Information about Leonardo da Vinci biography', 'snippet': 'Learn more about Leonardo da Vinci biography Overview related to Leonardo da Vinci biography. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Leonardo-da-Vinci-biography/1', 'source': 'Mock Search Engine'}, {'title': 'Leonardo da Vinci biography Guide - Information about Leonardo da Vinci biography', 'snippet': 'Learn more about Leonardo da Vinci biography Guide related to Leonardo da Vinci biography. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Leonardo-da-Vinci-biography/2', 'source': 'Mock Search Engine'}, {'title': 'Leonardo da Vinci biography Information - Information about Leonardo da Vinci biography', 'snippet': 'Learn more about Leonardo da Vinci biography Information related to Leonardo da Vinci biography. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Leonardo-da-Vinci-biography/3', 'source': 'Mock Search Engine'}, {'title': 'Leonardo da Vinci biography Tutorial - Information about Leonardo da Vinci biography', 'snippet': 'Learn more about Leonardo da Vinci biography Tutorial related to Leonardo da Vinci biography. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Leonardo-da-Vinci-biography/4', 'source': 'Mock Search Engine'}, {'title': 'Leonardo da Vinci biography Resources - Information about Leonardo da Vinci biography', 'snippet': 'Learn more about Leonardo da Vinci biography Resources related to Leonardo da Vinci biography. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Leonardo-da-Vinci-biography/5', 'source': 'Mock Search Engine'}], 'count': 5, 'summary': \"I found 5 results for 'Leonardo da Vinci biography': 1. Leonardo da Vinci biography Overview - Information about Leonardo da Vinci biogr... 2. Leonardo da Vinci biography Guide - Information about Leonardo da Vinci biograph... 3. Leonardo da Vinci biography Information - Information about Leonardo da Vinci bi... ... and 2 more results.\"}",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "search_web"
+        ],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:45:16.614386"
+      },
+      "timestamp": "2025-08-19T23:45:16.614424"
+    },
+    {
+      "id": "web_test_user_1755643521",
+      "user_id": "web_test_user",
+      "content": "User: search for Python tutorials\nAssistant: {'query': 'Python tutorials', 'engine': 'duckduckgo', 'results': [{'title': 'Python Tutorial - Information about Python tutorials', 'snippet': 'Learn more about Python Tutorial related to Python tutorials. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Python-tutorials/1', 'source': 'Mock Search Engine'}, {'title': 'Programming Guide - Information about Python tutorials', 'snippet': 'Learn more about Programming Guide related to Python tutorials. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Python-tutorials/2', 'source': 'Mock Search Engine'}, {'title': 'Code Examples - Information about Python tutorials', 'snippet': 'Learn more about Code Examples related to Python tutorials. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Python-tutorials/3', 'source': 'Mock Search Engine'}, {'title': 'Python Documentation - Information about Python tutorials', 'snippet': 'Learn more about Python Documentation related to Python tutorials. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Python-tutorials/4', 'source': 'Mock Search Engine'}, {'title': 'Development Tips - Information about Python tutorials', 'snippet': 'Learn more about Development Tips related to Python tutorials. This is mock search data for demonstration purposes.', 'url': 'https://example.com/search/Python-tutorials/5', 'source': 'Mock Search Engine'}], 'count': 5, 'summary': \"I found 5 results for 'Python tutorials': 1. Python Tutorial - Information about Python tutorials 2. Programming Guide - Information about Python tutorials 3. Code Examples - Information about Python tutorials ... and 2 more results.\"}",
+      "metadata": {
+        "interaction_type": "conversation_turn",
+        "success": true,
+        "tools_used": [
+          "search_web"
+        ],
+        "response_type": "unknown",
+        "timestamp": "2025-08-19T23:45:21.259830"
+      },
+      "timestamp": "2025-08-19T23:45:21.259862"
+    }
+  ],
+  "episodes": {},
+  "user_profiles": {},
+  "max_recent": 20
+}

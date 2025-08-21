@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Leonardo Tool Call Schema",
+  "description": "Strict JSON schema for Leonardo tool calls - ensures no chatty text",
+  "type": "object",
+  "properties": {
+    "tool": {
+      "type": "string",
+      "description": "Tool identifier from AVAILABLE_TOOLS registry",
+      "enum": [
+        "get_weather",
+        "web.scrape",
+        "web.search", 
+        "web.extract",
+        "web.crawl",
+        "web.deep_research",
+        "research.query",
+        "research.add_knowledge",
+        "research.configure",
+        "search_web",
+        "search_web_api",
+        "navigate_to",
+        "interact_with_page",
+        "extract_content",
+        "read_file",
+        "write_file",
+        "list_files",
+        "get_time",
+        "get_date",
+        "system_info",
+        "macos_control",
+        "calculate",
+        "respond",
+        "send_email",
+        "recall_memory",
+        "teach_command"
+      ]
+    },
+    "args": {
+      "type": "object",
+      "description": "Tool-specific arguments",
+      "additionalProperties": true,
+      "properties": {}
+    },
+    "meta": {
+      "type": "object",
+      "description": "Metadata including risk level",
+      "properties": {
+        "risk": {
+          "type": "string",
+          "description": "Risk level for validation wall",
+          "enum": ["safe", "review", "confirm", "owner_root"]
+        },
+        "command_id": {
+          "type": "string",
+          "description": "Unique command identifier"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "LLM confidence in tool choice"
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Brief reasoning for tool selection"
+        }
+      },
+      "required": ["risk"],
+      "additionalProperties": true
+    }
+  },
+  "required": ["tool", "args", "meta"],
+  "additionalProperties": false,
+  
+  "examples": [
+    {
+      "tool": "get_weather",
+      "args": {
+        "location": "London",
+        "units": "metric"
+      },
+      "meta": {
+        "risk": "safe",
+        "command_id": "weather_001",
+        "confidence": 0.95
+      }
+    },
+    {
+      "tool": "web.deep_research",
+      "args": {
+        "query": "Who is Ostin Solo?",
+        "depth": 3
+      },
+      "meta": {
+        "risk": "safe",
+        "command_id": "research_001",
+        "confidence": 0.88
+      }
+    },
+    {
+      "tool": "send_email",
+      "args": {
+        "to": "user@example.com",
+        "subject": "Meeting Notes",
+        "body": "Draft content here"
+      },
+      "meta": {
+        "risk": "confirm",
+        "command_id": "email_001",
+        "confidence": 0.76
+      }
+    }
+  ]
+}

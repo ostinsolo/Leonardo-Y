@@ -1,0 +1,101 @@
+# Leonardo Voice-First Assistant Dependencies
+# Based on curated repository list provided
+
+# 🎤 Voice & I/O Layer
+# Real-time conversational pipeline orchestration
+git+https://github.com/pipecat-ai/pipecat.git
+# Efficient local Whisper STT
+faster-whisper>=0.10.0  # guillaumekln/faster-whisper  
+# Microsoft Edge TTS voices
+git+https://github.com/microsoft/Edge-TTS.git
+# Optional local TTS (as backup)
+# git+https://github.com/coqui-ai/TTS.git
+
+# 🧠 Core NLP (Planner Layer) 
+# Qwen2.5 LLM backbone with reasoning + tool use
+transformers>=4.35.0
+torch>=2.0.0
+accelerate>=0.25.0
+# Fast LoRA fine-tuning for teaching Leonardo new commands
+git+https://github.com/unslothai/unsloth.git
+# Lightweight RL training loop for agents
+git+https://github.com/OpenPipe/ART.git
+# SWE-RL reward shaping examples  
+git+https://github.com/facebookresearch/swe-rl.git
+
+# 📚 Reasoning + RAG (Optional Enhancements)
+# Reasoning + web search integration
+git+https://github.com/PeterGriffinJin/Search-R1.git
+# RL for tool-use chaining  
+git+https://github.com/Agent-RL/ReCall.git
+# Structured agent + tool registry framework
+git+https://github.com/modelscope/agentscope.git
+# Model Context Protocol for standardized tool exposure
+git+https://github.com/modelcontextprotocol/modelcontextprotocol.git
+
+# 🔒 Execution & Safety Layer
+# Sandboxed agent framework with plugin architecture
+git+https://github.com/KroMiose/nekro-agent.git
+# Multimodal orchestration benchmark (future expansion)
+git+https://github.com/AI4WA/OpenOmniFramework.git
+
+# Validation and Schema
+pydantic>=2.5.0
+jsonschema>=4.20.0
+pydantic-settings>=2.1.0
+
+# Vector Databases and RAG
+chromadb>=0.4.18
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+
+# Web Research and Automation
+playwright>=1.40.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+httpx>=0.25.0
+
+# macOS Automation (Platform-specific)
+pyobjc>=10.0; sys_platform == "darwin"
+pyobjc-framework-Cocoa>=10.0; sys_platform == "darwin"
+pyobjc-framework-ApplicationServices>=10.0; sys_platform == "darwin"
+
+# TTS
+piper-tts>=1.2.0
+pygame>=2.5.0  # For audio playback
+
+# Security and Auditing
+pip-audit>=2.6.0
+bandit>=1.7.5
+
+# Development and Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.10.0
+mypy>=1.7.0
+
+# Logging and Monitoring
+loguru>=0.7.2
+structlog>=23.2.0
+
+# Configuration
+toml>=0.10.2
+python-dotenv>=1.0.0
+
+# API and Async
+uvicorn>=0.24.0
+fastapi>=0.104.0
+asyncio-mqtt>=0.13.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.1.0
+PyYAML>=6.0.1
+
+# Policy Engines (Optional - install separately)
+# open-policy-agent  # Install via: pip install open-policy-agent
+# cedar-policy       # Install via: pip install cedar-policy
+
+# CUDA Support (Optional - install separately for GPU acceleration)
+# nvidia-cublas-cu12>=12.0.0
+# nvidia-cudnn-cu12>=8.9.0

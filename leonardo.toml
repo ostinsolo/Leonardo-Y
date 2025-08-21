@@ -1,0 +1,99 @@
+# Leonardo Configuration File
+# Updated for specific repository implementations
+
+# Core settings (top level)
+debug = false
+log_level = "INFO"
+
+[audio]
+sample_rate = 16000
+chunk_size = 1024
+channels = 1
+vad_aggressiveness = 2
+enable_barge_in = true
+
+[stt]
+# Using guillaumekln/faster-whisper
+model_size = "base"
+device = "cpu"
+compute_type = "float32"
+beam_size = 5
+
+[llm]
+# QwenLM/Qwen2.5 configuration
+model_name = "Qwen/Qwen2.5-3B-Instruct"
+# model_path = "/path/to/local/model"  # Uncomment to use local model
+model_cache_dir = "./leonardo_model_cache"  # Local model cache directory
+max_tokens = 2048
+temperature = 0.7
+top_p = 0.9
+device = "cpu"  # Force CPU for Intel Mac stability
+offload_folder = "./leonardo_model_offload"  # Disk offload for memory management
+
+# Unsloth LoRA settings
+enable_lora = true
+lora_rank = 16
+lora_alpha = 32
+lora_dropout = 0.1
+
+# JSON constraints and tool use
+enable_json_constraints = true
+enable_tool_use = true
+enable_chain_of_thought = true
+
+[validation]
+enable_schema_validation = true
+enable_policy_engine = true
+enable_static_analysis = true
+enable_llm_validator = true
+max_retry_attempts = 2
+
+[sandbox]
+enable_mac_control = true
+enable_web_research = true
+enable_file_operations = true
+default_timeout = 30
+max_concurrent_ops = 5
+
+[rag]
+vector_db_type = "chroma"
+embedding_model = "all-MiniLM-L6-v2"
+chunk_size = 1000
+chunk_overlap = 200
+max_retrieval_results = 10
+
+[tts]
+# Microsoft Edge TTS configuration - British English Voice
+engine = "edge"
+voice = "en-GB-RyanNeural"
+language = "en-GB"
+speed = "+0%"
+pitch = "+0Hz"
+volume = "+0%"
+enable_earcons = true
+
+# Fallback TTS options
+fallback_engine = "piper"
+fallback_voice = "en_US-lessac-medium"
+
+[learning]
+enable_art_training = true
+reward_threshold = 0.8
+canary_percentage = 0.1
+
+# Risk tier mappings
+[risk_tiers]
+safe = ["search_web", "summarize", "calculate"]
+review = ["files_read", "applescript_info"]
+confirm = ["files_write", "email_send", "calendar_create"]
+owner_root = ["system_control", "install_software", "network_config"]
+
+# Web domain allowlist
+web_allowlist = [
+    "*.wikipedia.org",
+    "*.stackoverflow.com", 
+    "*.github.com",
+    "*.python.org",
+    "*.mozilla.org"
+]
+

@@ -1,0 +1,34 @@
+{
+  "recent_turns": [
+    {
+      "id": "simple_test_user_1755675530",
+      "user_id": "simple_test_user",
+      "content": "Simple test content",
+      "metadata": {
+        "test": true,
+        "user_id": "simple_test_user",
+        "timestamp": "2025-08-20T08:38:50.527115",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:38:50.527134",
+      "user_input": "Simple test content",
+      "ai_response": ""
+    },
+    {
+      "id": "simple_test_user_1755675583",
+      "user_id": "simple_test_user",
+      "content": "Simple test content",
+      "metadata": {
+        "test": true,
+        "user_id": "simple_test_user",
+        "timestamp": "2025-08-20T08:39:43.410156",
+        "leonardo_version": "1.0"
+      },
+      "timestamp": "2025-08-20T08:39:43.410177",
+      "user_input": "Simple test content",
+      "ai_response": ""
+    }
+  ],
+  "user_profiles": {},
+  "max_recent": 20
+}

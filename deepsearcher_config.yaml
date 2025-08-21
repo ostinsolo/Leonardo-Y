@@ -1,0 +1,28 @@
+# DeepSearcher Configuration for Local Models
+# Following user's suggestion to avoid OpenAI dependency
+
+llm:
+  provider: "ollama"          # Local Ollama instead of OpenAI
+  model: "llama3.2:latest"   # Use existing LLaMA 3.2 model
+  base_url: "http://localhost:11434"  # Default Ollama endpoint
+  api_key: ""                # No API key needed for local
+
+embedding:
+  provider: "sentence_transformers"  # Local embedding model
+  model: "all-MiniLM-L6-v2"         # Free local embedding
+  
+vectorstore:
+  provider: "milvus"          # Local Milvus instance
+  uri: "leonardo_research.db" # Local file-based database
+  collection_name: "leonardo_knowledge"
+  embedding_dim: 384          # Dimension for all-MiniLM-L6-v2
+
+search:
+  top_k: 5
+  score_threshold: 0.3
+
+# Research settings
+research:
+  max_iterations: 3
+  enable_web_search: true
+  enable_local_knowledge: true
