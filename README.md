@@ -24,6 +24,140 @@ Leonardo is a revolutionary voice-first AI assistant with a comprehensive archit
 - **📦 Production Ready**: Professional test suite with comprehensive quality analysis
 - **💰 Cost Effective**: $10-20/month cloud training vs $1000s for local GPU hardware
 
+## 🏛️ **System Architecture Diagram**
+
+The following diagram shows Leonardo's complete architecture with all components and data flows:
+
+```mermaid
+graph TB
+    subgraph "🎙️ Voice Input/Output Pipeline"
+        MIC[🎤 Microphone Input]
+        VAD[🔊 Voice Activity Detection]
+        STT[🗣️ Speech-to-Text<br/>Faster-Whisper]
+        TTS[📢 Text-to-Speech<br/>Microsoft Edge TTS]
+        SPEAKER[🔊 Speaker Output]
+    end
+    
+    subgraph "🧠 Core Intelligence Engine"
+        MEMORY[🧠 JARVIS-1 Memory<br/>- Semantic Clustering<br/>- Growing Context<br/>- User Profiling<br/>- 100% Recall]
+        PLANNER[🤖 LLM Planner<br/>- Qwen2.5-3B<br/>- Grammar Constraints<br/>- JSON Tool Calls]
+        RAG[📚 RAG System<br/>- Vector Search<br/>- Document Retrieval]
+    end
+    
+    subgraph "🛡️ Multi-Tier Validation Wall"
+        SCHEMA[📋 Schema Validator<br/>25 Tool Schemas]
+        POLICY[🛡️ Policy Engine<br/>Risk Assessment<br/>Rate Limiting]
+        LINTER[🔍 Code Linter<br/>AST Analysis<br/>Security Patterns]
+        AUDIT[📝 Audit Logger<br/>Complete Trail<br/>JSONL Format]
+    end
+    
+    subgraph "📦 Sandboxed Tool Execution"
+        TOOLS[🔧 Tool Ecosystem<br/>7 Active Tools]
+        WEB[🌐 Web Research<br/>DeepSearcher API<br/>Agentic Multi-Step]
+        CALC[🧮 Calculator]
+        FILES[📁 File Operations]
+        SYSTEM[💻 System Info]
+        WEATHER[🌤️ Weather API]
+        MACOS[🍎 macOS Control]
+        RESPONSE[💬 Response Generator]
+    end
+    
+    subgraph "🔍 Verification Layer"
+        NLI[🧠 NLI Model<br/>DistilBERT-MNLI<br/>Fact Checking]
+        VERIFY[✅ Post-Conditions<br/>Tool Result Validation]
+        CITATIONS[📚 Citation Store<br/>Source Tracking]
+    end
+    
+    subgraph "🎓 Learning System"
+        INTERACT_LOG[📊 Interaction Logger<br/>Session Analytics<br/>Quality Metrics]
+        LORA[🎯 LoRA Training<br/>Google Colab<br/>Unsloth Framework]
+        ART[🎨 ART Feedback<br/>Reinforcement Learning]
+    end
+    
+    subgraph "🧪 Testing & Quality"
+        TESTS[🧪 Test Suite<br/>10 Scenarios<br/>28 Questions<br/>100% Success Rate]
+        QUALITY[📊 Quality Analysis<br/>Response Coherence<br/>Context Awareness<br/>Reasoning Quality]
+        REVIEW[📝 Manual Review<br/>Conversation Analysis<br/>Answer Validation]
+    end
+    
+    %% Main Flow
+    MIC --> VAD
+    VAD --> STT
+    STT --> MEMORY
+    STT --> PLANNER
+    MEMORY --> PLANNER
+    RAG --> PLANNER
+    
+    %% Validation Flow
+    PLANNER --> SCHEMA
+    SCHEMA --> POLICY
+    POLICY --> LINTER
+    LINTER --> AUDIT
+    
+    %% Execution Flow
+    AUDIT --> TOOLS
+    TOOLS --> WEB
+    TOOLS --> CALC
+    TOOLS --> FILES
+    TOOLS --> SYSTEM
+    TOOLS --> WEATHER
+    TOOLS --> MACOS
+    TOOLS --> RESPONSE
+    
+    %% Verification Flow
+    TOOLS --> NLI
+    TOOLS --> VERIFY
+    NLI --> CITATIONS
+    VERIFY --> TTS
+    
+    %% Output Flow
+    RESPONSE --> TTS
+    TTS --> SPEAKER
+    
+    %% Learning Loop
+    TOOLS --> INTERACT_LOG
+    INTERACT_LOG --> LORA
+    INTERACT_LOG --> ART
+    LORA --> PLANNER
+    ART --> PLANNER
+    
+    %% Memory Update
+    TOOLS --> MEMORY
+    
+    %% Testing Integration
+    PLANNER --> TESTS
+    TOOLS --> QUALITY
+    QUALITY --> REVIEW
+    
+    %% Styling
+    classDef voiceStyle fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef intelligenceStyle fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef validationStyle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef toolStyle fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef verificationStyle fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef learningStyle fill:#fff8e1,stroke:#ff6f00,stroke-width:2px
+    classDef testingStyle fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+    
+    class MIC,VAD,STT,TTS,SPEAKER voiceStyle
+    class MEMORY,PLANNER,RAG intelligenceStyle
+    class SCHEMA,POLICY,LINTER,AUDIT validationStyle
+    class TOOLS,WEB,CALC,FILES,SYSTEM,WEATHER,MACOS,RESPONSE toolStyle
+    class NLI,VERIFY,CITATIONS verificationStyle
+    class INTERACT_LOG,LORA,ART learningStyle
+    class TESTS,QUALITY,REVIEW testingStyle
+```
+
+### 🔄 **Data Flow Explanation**
+
+1. **🎙️ Voice Input**: Microphone → VAD → STT → Text 
+2. **🧠 Intelligence**: Text + Memory + RAG → LLM Planning → Tool Selection
+3. **🛡️ Validation**: 5-Tier Security Wall (Schema → Policy → Linting → Audit)
+4. **📦 Execution**: Sandboxed Tool Execution (7 Tools + DeepSearcher)
+5. **🔍 Verification**: NLI Fact-Checking + Post-Condition Validation
+6. **📢 Voice Output**: Verified Result → TTS → Speaker
+7. **🎓 Learning**: Interaction Logging → LoRA Training → Model Improvement
+8. **🧠 Memory Update**: Experience Storage with Semantic Clustering
+
 ## 🏗️ **Architecture Components** 
 
 ### 🎙️ **1. Voice I/O Pipeline** (`leonardo/io/`)
