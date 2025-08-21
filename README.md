@@ -412,12 +412,16 @@ Leonardo has successfully implemented **enterprise-grade AI assistant capabiliti
 - **Grammar Constraints**: JSON-only tool call generation
 - **AgentScope**: Multi-agent orchestration framework
 
-### 🛡️ **3. Validation Wall** (`leonardo/validation/`)
+### 🛡️ **3. Validation Wall** (`leonardo/validation/`) - **PRODUCTION-READY SECURITY** 🛡️
 - **5-Tier Security**: Schema → Policy → Linting → Audit → Verification
-- **JSON Schema**: Validation for all 24 tool types
-- **Policy Engine**: Risk assessment, rate limiting, domain allowlists
-- **Code Linting**: AST analysis for dangerous patterns
-- **Audit Logging**: Complete JSONL compliance trail
+- **JSON Schema**: Validation for all 25+ tool types with Pydantic models
+- **Policy Engine**: Custom Python-based (📋 *Migration to OPA planned*) 
+  - Rate limiting: 50/min safe, 20/min review, 5/5min confirm, 2/hour critical
+  - Domain allowlists: GitHub, StackOverflow, Wikipedia, ArXiv, HuggingFace
+  - File security: Path restrictions, extension filtering, size limits
+  - Tool risk classification: Safe/Review/Confirm/Owner-Root levels
+- **Code Linting**: AST analysis for dangerous patterns and injection prevention
+- **Audit Logging**: Complete JSONL compliance trail with interaction tracing
 - **Post-Execution Verification**: NLI claim checking + tool result validation
 
 ### 📦 **4. Sandbox Executor** (`leonardo/sandbox/`) - **WORKING Agentic Research Engine** 🔬
@@ -432,13 +436,16 @@ Leonardo has successfully implemented **enterprise-grade AI assistant capabiliti
 - **macOS Control**: AppleScript, Shortcuts integration
 
 ### ✅ **5. Verification Layer** (`leonardo/verification/`) - **PRODUCTION-READY NLI VERIFICATION** 🔍
-- **NLI Claim Verification**: `typeform/distilbert-base-uncased-mnli` + `MoritzLaurer/DeBERTa-v3-base-mnli` fallback
+- **NLI Claim Verification**: Dual-model approach for accuracy and speed
+  - **Primary**: `typeform/distilbert-base-uncased-mnli` (67M params, fast inference)
+  - **Fallback**: `MoritzLaurer/DeBERTa-v3-base-mnli` (184M params, 90% accuracy)
+  - **Threshold**: 0.6 entailment confidence with batch processing (16 claims/batch)
+  - **Quantization**: FP16 optimization for faster inference on available hardware
 - **Citation Store**: Deterministic RAG cache with byte-accurate spans and SHA256 integrity
-- **Research Verifier**: Automated claim-citation entailment checking (0.6 threshold)
+- **Research Verifier**: Automated claim-citation entailment checking with coverage analysis
 - **Operations Verifier**: Tool-specific post-conditions (files, macOS, email, calendar, web)
 - **Risk-Based Policies**: Safe→warn, Review/Confirm→block based on operation risk
-- **Batch Processing**: Efficient multi-claim verification (16 claims/batch)
-- **Testing Mode**: Mock entailment for development with configurable thresholds
+- **Testing Mode**: Mock entailment using keyword overlap for development and CI
 
 ### 🔍 **6. Search-R1 Research Pipeline** (`leonardo/verification/`) - **MULTI-STEP REASONING** 🎯
 - **Facebook Search-R1**: Integrated reasoning and search with reinforcement learning
